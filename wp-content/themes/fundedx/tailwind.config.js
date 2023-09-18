@@ -1,5 +1,6 @@
 const _spaces = {
   '5px': '5px',
+  '8px': '8px',
   '10px': '10px',
   '15px': '15px',
   '20px': '20px',
@@ -39,6 +40,10 @@ const _spaces = {
   '190px': '190px',
   '195px': '195px',
   '200px': '200px',
+  '300px': '300px',
+  '350px': '350px',
+  '511px': '511px',
+  '900px': '900px',
   '80vh' : '80vh'
 }
 
@@ -48,6 +53,7 @@ const _percent = {
   '15%': '15%',
   '20%': '20%',
   '25%': '25%',
+  '26%': '26%',
   '30%': '30%',
   '35%': '35%',
   '40%': '40%',
@@ -87,24 +93,32 @@ module.exports = {
     colors: {
       black: '#000',
       white: '#fff',
+      primary: '#141414',
+      gray: '#858585',
+      darkgray: '#4B4A4A',
+      lightgray: '#eaedeb',
       transparent: 'transparent',
       current: 'currentColor',
     },
     fontFamily: {
-      pop: 'Poppins, sans-serif',
+      maven: 'Maven Pro, sans-serif',
     },
     fontSize: {
       '70px': ['70px', { lineHeight: '100px'}],
       '60px': ['60px', { lineHeight: '60px'}],
+      '54px': ['54px', { lineHeight: '60px'}],
       '50px': ['50px', { lineHeight: '60px'}],
       '45px': ['45px', { lineHeight: '55px'}],
+      '42px': ['42px', { lineHeight: '50px'}],
       '40px': ['40px', { lineHeight: '50px'}],
-      '35px': ['35px', { lineHeight: '45px'}],
+      '35px': ['35px', { lineHeight: '40px'}],
       '30px': ['30px', { lineHeight: '40px'}],
-      '25px': ['25px', { lineHeight: '30px'}],
+      '25px': ['25px', { lineHeight: '28px'}],
       '20px': ['20px', { lineHeight: '30px'}],
-      '18px': ['18px', { lineHeight: '30px'}],
-      '16px': ['16px', { lineHeight: '30px'}],
+      '18px': ['18px', { lineHeight: '25px'}],
+      '16px': ['16px', { lineHeight: '20px'}],
+      '14px': ['14px', { lineHeight: 'normal'}],
+      '12px': ['12px', { lineHeight: 'normal'}],
       '1em' : ['1em', { lineHeight: '1em' }],
     },
     extend: {
@@ -145,7 +159,7 @@ module.exports = {
       maxWidth: (theme) => ({
         ...theme('spacing'),
         ..._percent,
-        wrap: '1170px',
+        wrap: '1200px',
         'max-95': '95%'
       }),
       maxHeight: (theme) => ({

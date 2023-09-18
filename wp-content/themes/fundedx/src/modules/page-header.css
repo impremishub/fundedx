@@ -7,7 +7,7 @@
 }
 
 .page-header {
-    @apply absolute top-0 left-0 w-full h-full flex;
+    @apply absolute top-0 left-0 w-full h-full flex text-white;
 
     &.align-top {
         @apply items-start;
@@ -38,4 +38,25 @@
 
       
     }
-}  
+}
+
+.module-page-content {
+    h1 {
+        @apply font-semibold mb-20px;
+    }
+    p {
+        @apply opacity-80;
+    }
+}
+
+.stats-list {
+    p {
+        @apply uppercase font-medium opacity-80 mb-0;
+        letter-spacing: 1.4px;
+        font-size: 14px;
+    }
+    h3 {
+        letter-spacing: 0.67px;
+        @apply text-42px font-medium;
+    }
+}

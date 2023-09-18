@@ -1,10 +1,60 @@
+.site-header {
+    border-bottom: 1px solid #e3e3e3;
+}
+
 .main-navigation {
     @apply hidden md:block;
+}
+
+.header-main {
     ul {
-        @apply flex;
+        @apply flex items-center;
 
         li {
             @apply ml-20px;
+
+            a {
+                @apply font-semibold uppercase inline-block;
+            }
+        }
+    }
+}
+
+.header-right {
+    ul {
+        li {
+            a {
+                svg {
+                    @apply relative top-5px;
+                }
+
+                &:hover {
+                    svg {
+                        path {
+                            fill: gray;
+                        }
+                    }
+                }
+            }
+            &:last-child {
+                a {
+                    @apply bg-primary text-white py-10px px-30px rounded-md flex items-center;
+
+                    svg {
+                        @apply ml-8px top-0;
+                    }
+
+                    &:hover {
+                        @apply bg-gray;
+
+                        svg {
+                            path {
+                                fill: white;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

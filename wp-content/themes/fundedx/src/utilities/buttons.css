@@ -1,11 +1,48 @@
 .btn {
-    @apply inline-block py-10px px-30px transition;
+    @apply inline-block py-15px px-30px transition font-semibold text-16px uppercase text-white;
+    border-radius: 5px;
+
+    &:hover {
+        @apply text-white;
+    }
+
+    svg {
+        @apply inline-block ml-5px;
+    }
 
     &--primary {
-        @apply bg-black text-white border border-black; 
+        @apply bg-primary; 
 
         &:hover {
-            @apply bg-white text-black;
+            @apply bg-gray;
+        }
+    }
+
+    &--gray {
+        @apply bg-gray;
+
+        &:hover {
+            @apply bg-darkgray;
+        }
+    }
+
+    &--light {
+        @apply bg-lightgray text-primary;
+
+        svg {
+            path {
+                fill: #141414;
+            }
+        }
+
+        &:hover {
+            @apply bg-gray;
+
+            svg {
+                path {
+                    fill: white;
+                }
+            }
         }
     }
 }

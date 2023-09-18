@@ -4,9 +4,9 @@
 ?>
 
 
-<section class="module module--logo-carousel <?= $className ?>">
+<section class="module module--logo-carousel bg-gray <?= $className ?>">
     <div class="wrapper">
-        <h2 class="module--tile"><?= $heading ?></h2>
+        <h2 class="module--title text-center"><?= $heading ?></h2>
         <div class="logo-carousel js-logo-carousel owl-carousel">
             <?php while( have_rows('logo') ): the_row(); ?>
                 <div class="logo-item">

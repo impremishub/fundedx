@@ -106,5 +106,49 @@ function my_acf_init() {
             'icon'              => 'forms',
             'keywords'          => array( 'forms', 'contact', 'contact form' ),
         ));
+
+        // HOW IT WORKS
+        acf_register_block(array(
+            'name'              => 'how-it-works',
+            'title'             => __('How it Works'),
+            'description'       => __('A custom How it Works block.'),
+            'render_callback'   => 'impremis_block_callback',
+            'category'          => 'impremis',
+            'icon'              => 'list-view',
+            'keywords'          => array( 'text', 'image' ),
+        ));
+
+        // Challenges
+        acf_register_block(array(
+            'name'              => 'challenges',
+            'title'             => __('Challenges'),
+            'description'       => __('A custom Challenges block.'),
+            'render_callback'   => 'impremis_block_callback',
+            'category'          => 'impremis',
+            'icon'              => 'format-gallery',
+            'keywords'          => array( 'text', 'image', 'gallery', 'challenges' ),
+        ));
+
+        // Broker
+        acf_register_block(array(
+            'name'              => 'broker',
+            'title'             => __('Broker'),
+            'description'       => __('A custom Broker block.'),
+            'render_callback'   => 'impremis_block_callback',
+            'category'          => 'impremis',
+            'icon'              => 'admin-home',
+            'keywords'          => array( 'text', 'image', 'gallery', 'broker' ),
+        ));
+
+        // Video Carousel
+        acf_register_block(array(
+            'name'              => 'video-carousel',
+            'title'             => __('Video Carousel'),
+            'description'       => __('A custom Broker block.'),
+            'render_callback'   => 'impremis_block_callback',
+            'category'          => 'impremis',
+            'icon'              => 'format-video',
+            'keywords'          => array( 'text', 'image', 'gallery', 'video-carousel' ),
+        ));
     }
 }

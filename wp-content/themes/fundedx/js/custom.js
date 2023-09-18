@@ -79,4 +79,53 @@
 
 	});
 
+    //IMG TAG TO SVG CODE
+    $('.img-svg').each(function() {
+        var $img = $(this);
+        var imgURL = $img.attr('src');
+
+        $.get(imgURL, function(data) {
+            // Get the SVG tag, ignore the rest
+            var $svg = $(data).find('svg');
+            // Replace image with new SVG
+            $img.replaceWith($svg);
+        });
+    });
+
+
+    // SLICK SLIDER FOR CHALLENGES
+    $('.card--carousel')
+        .on('afterChange init', function(event, slick, direction){
+            console.log('afterChange/init', event, slick, slick.$slides);
+            // remove all prev/next
+            slick.$slides.removeClass('card--prev').removeClass('card--next');
+
+            // find current slide
+            for (var i = 0; i < slick.$slides.length; i++)
+            {
+                var $slide = $(slick.$slides[i]);
+                if ($slide.hasClass('slick-current')) {
+                    // update DOM siblings
+                    $slide.prev().addClass('card--prev');
+                    $slide.next().addClass('card--next');
+                    break;
+                }
+            }
+        }
+        )
+        .on('beforeChange', function(event, slick) {
+            // optional, but cleaner maybe
+            // remove all prev/next
+            slick.$slides.removeClass('card--prev').removeClass('card--next');
+        })
+        .slick({
+            centerMode: true,
+            centerPadding: '0',
+            arrows: true,
+            slidesToShow: 3,
+            initialSlide: 1,
+            dots: true,
+        });
+
 })();
+

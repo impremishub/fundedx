@@ -15,3 +15,9 @@
         @apply max-w-100px md:max-w-200px;
     }
 }
+.top-badge-text {
+    p {
+        @apply uppercase underline text-1em;
+        letter-spacing: 0.7px;
+    }
+}
